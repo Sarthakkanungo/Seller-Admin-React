@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from './InputForm.module.css';
 
 const InputForm = (props) => {
    
@@ -52,32 +53,35 @@ const InputForm = (props) => {
 
   return (
     <div>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className={styles.container}>
         <div>
-          <label>Product Id</label>
+          <label className={styles.label}>Product Id</label>
           <input
             type="number"
             value={enterProductID}
             onChange={productIdChangeHandler}
+            className={styles.input}
           />
 
-          <label>SellingPrice</label>
+          <label className={styles.label}>SellingPrice</label>
           <input
             type="number"
             value={enterSellingPrice}
             onChange={sellingPriceChangeHandler}
+            className={styles.input}
           />
 
-          <label>Product Name</label>
+          <label  className={styles.label}>Product Name</label>
           <input
             type="text"
             value={enterProductName}
             onChange={productChangeHandler}
+            className={styles.input}
           />
-          <button type="submit">Add Product</button>
+          <button type="submit" className={styles.button}>Add Product</button>
         </div>
       </form>
-      <h1>Products</h1>
+      <h1  className={styles.h1}>Products</h1>
     </div>
   );
 };

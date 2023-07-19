@@ -33,10 +33,11 @@ const App = () => {
 
   return (
     <div>
+      <h1 style={{textAlign:"center"}}> Shop Inventory</h1>
       <InputForm onAddproduct={addproductHandler} />
 
       <Productlist list={productList} setList={setproductList}  setTotal={setTotalAmount}/>
-      <h2> Total Amount is : RS.{totalAmount}</h2>
+      <h2 style={{textAlign: "center"}}> Total Amount is : Rs.{totalAmount}</h2>
     </div>
   );
 };
